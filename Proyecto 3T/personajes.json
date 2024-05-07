@@ -1,0 +1,83 @@
+[
+    {
+        "_id":1,
+        "nombre":"Julio César",
+        "biografia":"Político y militar romano, conquistador de la Galia. Se le considera segundo fundador de la ciudad ",
+        "anyosvida":55,
+        "lugarnacimiento":"Roma",
+        "epoca":"Antigüedad"
+    },
+    {
+        "_id":2,
+        "nombre":"Bartolomé Esteban Murillo",
+        "biografia":"Famoso pintor barroco, realizó numerosas pinturas religiosas en la ciudad",
+        "anyosvida":64,
+        "lugarnacimiento":"Sevilla",
+        "epoca":"Barroco"
+    },
+    {
+        "_id":3,
+        "nombre":"Fernando III",
+        "biografia":"Rey que conquistó la ciudad de Sevilla en 1248",
+        "anyosvida":52,
+        "lugarnacimiento":"Peleas de Arriba",
+        "epoca":"Edad Media"
+    },
+    {
+        "_id":4,
+        "nombre":"Francisco de Asís Palacios Ortega, El Pali",
+        "biografia":"Uno de los cantaores y autores de sevillanas más famosos de la segunda mitad del siglo XX",
+        "anyosvida":60,
+        "lugarnacimiento":"Sevilla",
+        "epoca":"Contemporánea"
+    },
+    {
+        "_id":5,
+        "nombre":"Bartolomé de las Casas",
+        "biografia":"Denunció el maltrato a indígenas americanos y luchó contra la esclavitud, lo que llevó a legislar para protegerlos de abusos",
+        "anyosvida":91,
+        "lugarnacimiento":"Sevilla",
+        "epoca":"Renacimiento"
+    },
+    {
+        "_id":6,
+        "nombre":"Pablo de Olavide",
+        "biografia":"Ilustrado proveniente de Lima que introdujo reformas en la ciudad, como alumbrado público y elaboró el primer plano de la ciudad organizado en barrios",
+        "anyosvida":78,
+        "lugarnacimiento":"Lima",
+        "epoca":"Ilustración"
+    },
+    {
+        "_id":7,
+        "nombre":"Miguel de Cervantes",
+        "biografia":"Escritor de El Quijote, se dice que escribió la primera en la cárcel de la ciudad, y donde conoció los delincuentes que le inspiraron para historias como Rinconete y Cortadillo",
+        "anyosvida":68,
+        "lugarnacimiento":"Alcalá de Henares",
+        "epoca":"Renacimiento"
+    },
+    {
+        "_id":8,
+        "nombre":"Itimad Romaiquía",
+        "biografia":"Poetisa andalusí del siglo XI y esposa del rey Al-Mutamid del reino de Sevilla",
+        "anyosvida":50,
+        "lugarnacimiento":"Sevilla",
+        "epoca":"Edad Media"
+    },
+    {
+        "_id":9,
+        "nombre":"María del Rosario Cayetana Fitz-James Stuart y de Silva",
+        "biografia":"La famosa duquesa de Alba tan vinculada a la ciudad ",
+        "anyosvida":88,
+        "lugarnacimiento":"Madrid",
+        "epoca":"Contemporánea"
+    },
+    {
+        "_id":10,
+        "nombre":"Cecilia Böhl de Faber",
+        "biografia":"Escritora y folklorista española, conocida por el seudónimo de Fernán Caballero",
+        "anyosvida":80,
+        "lugarnacimiento":"Morges",
+        "epoca":"Contemporánea"
+    }
+
+]

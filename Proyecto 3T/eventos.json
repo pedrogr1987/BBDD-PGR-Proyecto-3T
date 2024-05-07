@@ -1,0 +1,93 @@
+[
+    {
+        "_id":1,
+        "nombre":"Primer Auto de fe de la Santa Inquisición",
+        "fecha":{
+            "$date": "1481-02-06T00:00:00Z"
+          },
+        "descripcion":"Sevilla fue el lugar donde se hizo el primer auto de fe, quemando vivas a seis personas",
+        "ubicacion":"Plaza Mayor"
+    },
+    {
+        "_id":2,
+        "nombre":"Salida de la expedición de Magallanes-Elcano",
+        "fecha":{
+            "$date": "1519-08-10T00:00:00Z"
+          },
+        "descripcion":"Salida de la expedición en búsqueda de una ruta hacia el oeste para llegar a la Especiería, que resultó en la primera vuelta al mundo",
+        "ubicacion":"río Guadalquivir"
+    },
+    {
+        "_id":3,
+        "nombre":"Primera feria de Sevilla",
+        "fecha":{
+            "$date": "1847-04-18T00:00:00Z"
+          },
+        "descripcion":"Inauguración de la primera feria de abril",
+        "ubicacion":"Prado de San Sebastián"
+    },
+    {
+        "_id":4,
+        "nombre":"Ocupación francesa de Sevilla",
+        "fecha":{
+            "$date": "1810-02-01T00:00:00Z"
+          },
+        "descripcion":"Las tropas francesas al mando del general Claude Perrin Victor tomaron la ciudad sin realizar un solo disparo",
+        "ubicacion":"Toda la ciudad"
+    },
+    {
+        "_id":5,
+        "nombre":"Exposición Iberoamericana ",
+        "fecha":{
+            "$date": "1929-05-09T00:00:00Z"
+          },
+        "descripcion":"Exposición para dar muestra del hermanamiento de España, Hispanoamérica, Brasil, Portugal y Estados Unidos",
+        "ubicacion":"parque de María Luisa"
+    },
+    {
+        "_id":6,
+        "nombre":"Queipo de Llano toma la ciudad",
+        "fecha":{
+            "$date": "1936-07-18T00:00:00Z"
+          },
+        "descripcion":"El general golpista toma la ciudad tras reprimir la escasa resistencia que se levanta contra el golpe de estado",
+        "ubicacion":"Toda la ciudad"
+    },
+    {
+        "_id":7,
+        "nombre":"Exposición Universal de Sevilla",
+        "fecha":{
+            "$date": "1992-04-20T00:00:00Z"
+          },
+        "descripcion":"Se inaugura la famosa Expo de 1992, que hizo transformarse la ciudad y parecer que podía ser moderna",
+        "ubicacion":"Isla de la Cartuja"
+    },
+    {
+        "_id":8,
+        "nombre":"Prohibición de la esclavitud",
+        "fecha":{
+            "$date": "1500-06-20T00:00:00Z"
+          },
+        "descripcion":"La reina Isabel prohíbe la esclavitud y los indígenas pasan a ser considerados subditos de la Corona al igual que el resto de españoles",
+        "ubicacion":"desconocida"
+    },
+    {
+        "_id":9,
+        "nombre":"Inauguración de la Maestranza",
+        "fecha":{
+            "$date": "1763-04-20T00:00:00Z"
+          },
+        "descripcion":"Se inaugura la plaza de toros de La Maestranza ",
+        "ubicacion":"Arenal"
+    },
+    {
+        "_id":10,
+        "nombre":"Inauguración del aeródromo de Sevilla",
+        "fecha":{
+            "$date": "1923-04-12T00:00:00Z"
+          },
+        "descripcion":"El rey Alfonso XIII inaugura el primer aeródromo de la ciudad",
+        "ubicacion":"Tablada"
+    }
+
+]

@@ -1,0 +1,83 @@
+[
+    {
+        "_id":1,
+         "nombre":"Catedral de Santa María",
+         "descripcion":"La catedral gótica más grande del mundo",
+         "ubicacion":"centro",
+         "anoConstruccion":1433,
+         "milesturistasanuales":25100
+    },
+    {
+        "_id":2,
+         "nombre":"Giralda",
+         "descripcion":"El campanario de la catedral, antiguo alminar de la mezquita",
+         "ubicacion":"centro",
+         "anoConstruccion":1184,
+         "milesturistasanuales":25000
+    },
+    {
+        "_id":3,
+         "nombre":"Alcazar",
+         "descripcion":"Palacio medieval de estilo mudéjar",
+         "ubicacion":"centro",
+         "anoConstruccion":1090,
+         "milesturistasanuales":22000
+    },
+    {
+        "_id":4,
+         "nombre":"Plaza de España",
+         "descripcion":"Plaza monumental construida para la Exposición Iberoamericana de 1929",
+         "ubicacion":"parque de María Luisa",
+         "anoConstruccion":1929,
+         "milesturistasanuales":10500
+    },
+    {
+        "_id":5,
+         "nombre":"Iglesia de Santa Ana",
+         "descripcion":"Iglesia medieval en el corazón de Triana",
+         "ubicacion":"Triana",
+         "anoConstruccion":1280,
+         "milesturistasanuales":1800
+    },
+    {
+        "_id":6,
+         "nombre":"Torre Sevilla",
+         "descripcion":"Primer rascacielos en una ciudad con fobia a edificios más altos que la Giralda",
+         "ubicacion":"Isla de la Cartuja",
+         "anoConstruccion":2014,
+         "milesturistasanuales":1200
+    },
+    {
+        "_id":7,
+         "nombre":"Teatro Maestranza",
+         "descripcion":"Teatro en donde disfrutar tanto de obras de teatro como conciertos",
+         "ubicacion":"Arenal",
+         "anoConstruccion":1987,
+         "milesturistasanuales":20010
+    },
+    {
+        "_id":8,
+         "nombre":"Plaza de toros de la Maestranza",
+         "descripcion":"Disfrute de la tortura animal mientras justifica su sadismo diciendo que está en un acto cultural",
+         "ubicacion":"Arenal",
+         "anoConstruccion":1754,
+         "milesturistasanuales":22150
+    },
+    {
+        "_id":9,
+         "nombre":"Huevo de Colón",
+         "descripcion":"Monumento al descubrimiento de América, regalo de Rusia a Sevilla",
+         "ubicacion":"San Jerónimo",
+         "anoConstruccion":1995,
+         "milesturistasanuales":250
+    },
+    {
+        "_id":10,
+         "nombre":"Basílica de Jesús del Gran Poder",
+         "descripcion":"Templo católico situado en San Lorenzo, sede de una de las hermandades más importantes de la ciudad y del universo",
+         "ubicacion":"centro",
+         "anoConstruccion":1965,
+         "milesturistasanuales":50000
+    }
+
+]

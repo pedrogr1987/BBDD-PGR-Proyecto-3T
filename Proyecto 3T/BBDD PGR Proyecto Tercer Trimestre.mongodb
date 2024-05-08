@@ -1,0 +1,106 @@
+/*Empezamos creando la Base de Datos y las colecciones que la formarán:*/
+
+use("sevilla_historica")
+db.createCollection("lugares");
+db.createCollection("eventos");
+db.createCollection("personajes")
+
+//Búsquedas
+
+/*Buscar todos los lugares históricos ubicados en el centro de Sevilla.*/
+
+db.lugares.find({"ubicacion":/centro/});
+
+/*Encontrar eventos históricos que tuvieron lugar durante el reinado de los Reyes Católicos.*/
+
+db.eventos.find({$and:[{"fecha":{$gte:ISODate('1475-01-15')}},{"fecha":{$lte:ISODate('1504-10-26')} }]});
+
+//Buscar personajes destacados nacidos en Sevilla.
+
+db.personajes.find({"lugarnacimiento":/Sevilla/});
+
+//Encontrar lugares con más de 500 años de antigüedad.
+
+var currentyear = new Date().getFullYear()
+db.lugares.find({"anoConstruccion":{$lt:currentyear - 500}});
+
+//Buscar eventos relacionados con la historia de la ciudad durante el siglo XIX.
+
+db.eventos.find({$and:[{"fecha":{$gte:ISODate('1800-01-01')}},{"fecha":{$lt:ISODate('1900-01-01')} }]});
+
+/*Añade una consulta personalizada.
+
+Personajes cuyo lugar de nacimiento no sea Sevilla*/
+
+use("sevilla_historica")
+db.personajes.find({lugarnacimiento:{$not:/Sevilla/}});
+
+/*Agregaciones:
+
+Calcular el número total de lugares históricos en la base de datos.*/
+
+db.lugares.aggregate([{$group:{_id: "numero de lugares","numero": {$sum:1}}}])
+
+//Encontrar la época con más eventos históricos registrados.
+
+db.eventos.aggregate([{$facet:{sigloXV:[{$match: {
+  "fecha":{$gte: new Date("1400-01-01"), $lt: new Date("1500-01-01")
+}}},{$count:"numeroeventos"}],
+sigloXVI:[{$match: {
+    "fecha":{$gte: new Date("1500-01-01"), $lt: new Date("1600-01-01")
+}}},{$count:"numeroeventos"}],
+sigloXVII:[{$match: {
+"fecha":{$gte: new Date("1600-01-01"), $lt: new Date("1700-01-01")
+}}},{$count:"numeroeventos"}],
+sigloXVIII:[{$match: {
+"fecha":{$gte: new Date("1700-01-01"), $lt: new Date("1800-01-01")
+}}},{$count:"numeroeventos"}],
+sigloXIX:[{$match: {
+    "fecha":{$gte: new Date("1800-01-01"), $lt: new Date("1900-01-01")
+}}},{$count:"numeroeventos"}],
+sigloXX:[{$match: {
+    "fecha":{$gte: new Date("1900-01-01"), $lt: new Date("2000-01-01")
+    }}},{$count:"numeroeventos"}]
+}},{$project: {periodoconmasEventos:{$max:[{total:"$sigloXV.numeroeventos",periodo:"sigloXV"},{total:"$sigloXVI.numeroeventos",periodo:"sigloXVI"},
+{total:"$sigloXVII.numeroeventos",periodo:"sigloXVII"},{total:"$sigloXVIII.numeroeventos", periodo:"sigloXVIII"},{total:"$sigloXIX.numeroeventos",periodo:"sigloXIX"},
+{total:"$sigloXX.numeroeventos",periodo:"sigloXX"}]}}}]);
+
+//Agrupar los eventos por siglo y contar cuántos hay en cada siglo
+ 
+db.eventos.aggregate([{$facet:{sigloXV:[{$match: {
+  "fecha":{$gte: new Date("1400-01-01"), $lt: new Date("1500-01-01")
+}}},{$count:"numeroeventos"}],
+sigloXVI:[{$match: {
+    "fecha":{$gte: new Date("1500-01-01"), $lt: new Date("1600-01-01")
+}}},{$count:"numeroeventos"}],
+sigloXVII:[{$match: {
+"fecha":{$gte: new Date("1600-01-01"), $lt: new Date("1700-01-01")
+}}},{$count:"numeroeventos"}],
+sigloXVIII:[{$match: {
+"fecha":{$gte: new Date("1700-01-01"), $lt: new Date("1800-01-01")
+}}},{$count:"numeroeventos"}],
+sigloXIX:[{$match: {
+    "fecha":{$gte: new Date("1800-01-01"), $lt: new Date("1900-01-01")
+}}},{$count:"numeroeventos"}],
+sigloXX:[{$match: {
+    "fecha":{$gte: new Date("1900-01-01"), $lt: new Date("2000-01-01")
+    }}},{$count:"numeroeventos"}]
+}}]);
+
+//Calcular el promedio de años de vida de los personajes históricos.
+ 
+db.personajes.aggregate([{$group:{_id: null,"mediaEdad": {$avg:"$anyosvida"}}}])
+
+//Encontrar los lugares más visitados por turistas y mostrar los cinco primeros.
+
+db.lugares.find().sort({"milesturistasanuales":-1}).limit(5);
+
+/*Añade una agregación personalizada.
+
+Personaje más longevo y el que vivió menos tiempo*/
+
+db.personajes.aggregate([{$facet:{
+  personajemaslongevo:[
+  {$sort:{anyosvida:-1}},{$limit:1}],
+  personajemenoslongevo: [{$sort:{anyosvida:1}},{$limit:1}]
+}}]);
